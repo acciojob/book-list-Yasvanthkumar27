@@ -1,14 +1,5 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-
 .form-group {
   margin-bottom: 20px;
-}
-
-.form-group form div {
-  margin-bottom: 10px;
 }
 
 .table-striped th, .table-striped td {

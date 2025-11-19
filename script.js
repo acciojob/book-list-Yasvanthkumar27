@@ -1,50 +1,44 @@
 const form = document.getElementById("book-form");
-const titleInput = document.getElementById("title");
-const authorInput = document.getElementById("author");
-const isbnInput = document.getElementById("isbn");
-const listBody = document.getElementById("book-list");
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const isbn = document.getElementById("isbn");
+const list = document.getElementById("book-list");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const title = titleInput.value.trim();
-  const author = authorInput.value.trim();
-  const isbn = isbnInput.value.trim();
-
-  if (!title || !author || !isbn) return;
+  if (!title.value || !author.value || !isbn.value) return;
 
   const tr = document.createElement("tr");
 
   const td1 = document.createElement("td");
-  td1.textContent = title;
+  td1.textContent = title.value;
 
   const td2 = document.createElement("td");
-  td2.textContent = author;
+  td2.textContent = author.value;
 
   const td3 = document.createElement("td");
-  td3.textContent = isbn;
+  td3.textContent = isbn.value;
 
   const td4 = document.createElement("td");
-  const delBtn = document.createElement("button");
-  delBtn.textContent = "X";
-  delBtn.className = "delete";  // REQUIRED BY TEST
-  td4.appendChild(delBtn);
+  const del = document.createElement("button");
+  del.textContent = "Delete";
+  del.className = "delete";   // REQUIRED BY TEST
+  td4.appendChild(del);
 
   tr.appendChild(td1);
   tr.appendChild(td2);
   tr.appendChild(td3);
   tr.appendChild(td4);
 
-  listBody.appendChild(tr);
+  list.appendChild(tr);
 
-  // reset fields
-  titleInput.value = "";
-  authorInput.value = "";
-  isbnInput.value = "";
+  title.value = "";
+  author.value = "";
+  isbn.value = "";
 });
 
-// DELETE ROW — test expects .delete button
-listBody.addEventListener("click", function (e) {
+list.addEventListener("click", function(e) {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.parentElement.remove();
   }

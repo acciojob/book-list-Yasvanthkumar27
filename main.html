@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<h1 class="brand">My<span>Book</span>List</h1>
 
-  <!-- Form to add a book -->
-  <form id="book-form" class="form">
-    <div class="form-row">
-      <label for="title">Title</label>
-      <input id="title" type="text" placeholder="Enter title" />
-    </div>
+  <h1>MyBookList</h1>
 
-    <div class="form-row">
-      <label for="author">Author</label>
-      <input id="author" type="text" placeholder="Enter author" />
-    </div>
+  <!-- REQUIRED by test -->
+  <div class="form-group">
+    <form id="book-form">
 
-    <div class="form-row">
-      <label for="isbn">ISBN#</label>
-      <input id="isbn" type="text" placeholder="Enter ISBN" />
-    </div>
+      <div>
+        <label>Title</label>
+        <input type="text" id="title">
+      </div>
 
-    <div class="form-row">
-      <button id="submit" type="submit">Add book</button>
-    </div>
-  </form>
+      <div>
+        <label>Author</label>
+        <input type="text" id="author">
+      </div>
 
-  <!-- Table that will hold the list of books -->
-  <table class="table" style="width:100%;">
+      <div>
+        <label>ISBN#</label>
+        <input type="text" id="isbn">
+      </div>
+
+      <button id="submit" type="submit">Add Book</button>
+
+    </form>
+  </div>
+
+  <!-- REQUIRED by test -->
+  <table class="table-striped" border="1" width="100%">
     <thead>
       <tr>
         <th>Title</th>
@@ -42,14 +44,9 @@
         <th>Action</th>
       </tr>
     </thead>
-    <tbody id="book-list">
-      <!-- rows will be appended here -->
-    </tbody>
-  </table>
+    <tbody id="book-list"></tbody>
+  </table>
 
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
