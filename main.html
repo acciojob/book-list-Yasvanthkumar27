@@ -8,6 +8,45 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<h1 class="brand">My<span>Book</span>List</h1>
+
+  <!-- Form to add a book -->
+  <form id="book-form" class="form">
+    <div class="form-row">
+      <label for="title">Title</label>
+      <input id="title" type="text" placeholder="Enter title" />
+    </div>
+
+    <div class="form-row">
+      <label for="author">Author</label>
+      <input id="author" type="text" placeholder="Enter author" />
+    </div>
+
+    <div class="form-row">
+      <label for="isbn">ISBN#</label>
+      <input id="isbn" type="text" placeholder="Enter ISBN" />
+    </div>
+
+    <div class="form-row">
+      <button id="submit" type="submit">Add book</button>
+    </div>
+  </form>
+
+  <!-- Table that will hold the list of books -->
+  <table class="table" style="width:100%;">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN#</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="book-list">
+      <!-- rows will be appended here -->
+    </tbody>
+  </table>
+
     <script type="text/javascript" src="./script.js">
 </script>
 

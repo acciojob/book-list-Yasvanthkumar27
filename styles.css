@@ -1,1 +1,93 @@
 /*  your css code here. If applicable */
+/* Your CSS Code here. */
+:root{
+  --accent: #2b9edb;
+  --muted: #666;
+  --border: #e5e7eb;
+}
+
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  padding: 18px;
+  color: #222;
+  background: #fff;
+}
+
+.brand{
+  text-align: center;
+  font-weight: 300;
+  margin: 6px 0 18px;
+  font-size: 2rem;
+  color: var(--muted);
+}
+.brand span{
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.form{
+  max-width: 760px;
+  margin: 0 auto 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  align-items: end;
+}
+
+.form-row{
+  display:flex;
+  flex-direction: column;
+  gap:6px;
+}
+
+.form-row label{
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.form-row input{
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+#submit{
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.table{
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 760px;
+  width: 100%;
+}
+
+.table thead th{
+  padding: 10px 8px;
+  text-align: left;
+  background: #f7fafc;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table tbody td{
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.btn-delete{
+  background: transparent;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
